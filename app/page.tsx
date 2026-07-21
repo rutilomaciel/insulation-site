@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
     const [formData, setFormData] = useState({
@@ -45,9 +46,15 @@ export default function Home() {
     return (
         <main>
             {/* Header */}
-            <header className="border-b border-gray-200">
+            <header className="border-b border-gray-200 bg-[#faf3e8]">
                 <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-                    <span className="text-xl font-bold">AJ Insulation LLC</span>
+                    <Image
+                        src="/AJ Logo F.png"
+                        alt="AJ Insulation LLC"
+                        width={120}
+                        height={80}
+                        className="h-24"
+                        />
 
                     <nav className="hidden gap-8 text-sm font-medium md:flex">
                         <a href="#services" className="hover:text-blue-600">Services</a>
@@ -133,7 +140,7 @@ export default function Home() {
                 <div className="mx-auto max-w-6xl px-6 text-center">
                     <h2 className="text-3xl font-bold">Areas We Serve</h2>
                     <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-                        Proudly serving Yakima, Selah, Moxee, and surrounding areas.
+                        Proudly serving Yakima, Selah, Moxee, Sunnyside, Ellensburg, Cle Elum, Tri-Cities and surrounding areas.
                     </p>
                 </div>
             </section>
