@@ -1,4 +1,47 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function Home() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: '',
+    });
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('https://formspree.io/f/xojgworw', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setSubmitted(true);
+                setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+                setTimeout(() => setSubmitted(false), 5000);
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
+    };
+
     return (
         <main>
             {/* Header */}
@@ -97,14 +140,82 @@ export default function Home() {
 
             {/* Contact */}
             <section id="contact" className="py-16">
-                <div className="mx-auto max-w-2xl px-6 text-center">
-                    <h2 className="text-3xl font-bold">Get in Touch</h2>
-                    <p className="mt-4 text-gray-600">
-                        Contact form link here — for now, call us at{" "}
+                <div className="mx-auto max-w-2xl px-6">
+                    <h2 className="text-center text-3xl font-bold">Get in Touch</h2>
+
+                    {submitted && (
+                        <div className="mt-6 rounded-lg bg-green-100 p-4 text-center text-green-800">
+                            ✓ Thanks for reaching out! We'll contact you soon.
+                        </div>
+                    )}
+
+                    <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                        />
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                        />
+
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone Number"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                        />
+
+                        <select
+                            name="service"
+                            value={formData.service}
+                            onChange={handleChange}
+                            required
+                            className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                        >
+                            <option value="">Select a Service</option>
+                            <option value="Attic Insulation">Attic Insulation</option>
+                            <option value="Spray Foam">Spray Foam</option>
+                            <option value="Blown-In Insulation">Blown-In Insulation</option>
+                            <option value="Insulation Removal">Insulation Removal</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <textarea
+                            name="message"
+                            placeholder="Tell us about your project..."
+                            value={formData.message}
+                            onChange={handleChange}
+                            rows={5}
+                            className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                        />
+
+                        <button
+                            type="submit"
+                            className="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white hover:bg-blue-700"
+                        >
+                            Send Inquiry
+                        </button>
+                    </form>
+
+                    <p className="mt-6 text-center text-sm text-gray-600">
+                        Or call us directly at{" "}
                         <a href="tel:+15097315584" className="font-semibold text-blue-600">
                             (509) 731-5584
                         </a>
-                        .
                     </p>
                 </div>
             </section>
