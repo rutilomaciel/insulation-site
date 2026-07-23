@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import ProjectCarousel from './components/ProjectCarousel';
 
 export default function Home() {
     const [formData, setFormData] = useState({
@@ -53,10 +54,10 @@ export default function Home() {
                         alt="AJ Insulation LLC"
                         width={120}
                         height={80}
-                        className="h-24"
+                        className="h-24 w-auto"
                         />
 
-                    <nav className="hidden gap-8 text-sm font-medium md:flex">
+                    <nav className="hidden gap-8 text-base font-medium md:flex">
                         <a href="#services" className="hover:text-blue-600">Services</a>
                         <a href="#contact" className="hover:text-blue-600">Contact</a>
                     </nav>
@@ -87,34 +88,40 @@ export default function Home() {
                 </a>
             </section>
 
+            <ProjectCarousel/>
+
             {/* Services */}
             <section id="services" className="bg-gray-50 py-16">
                 <div className="mx-auto max-w-6xl px-6">
                     <h2 className="text-center text-3xl font-bold text-black">Our Services</h2>
 
                     <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols 4">
-                        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm
+                        transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <h3 className="text-lg font-semibold">Attic Insulation</h3>
                             <p className="mt-2 text-sm text-gray-600">
                                 Reduce energy loss with proper attic insulation.
                             </p>
                         </div>
 
-                        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm
+                        transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <h3 className="text-lg font-semibold">Spray Foam</h3>
                             <p className="mt-2 text-sm text-gray-600">
                                 Long-lasting, high-efficiency spray foam application.
                             </p>
                         </div>
 
-                        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm
+                        transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <h3 className="text-lg font-semibold">Blown-In Insulation</h3>
                             <p className="mt-2 text-sm text-gray-600">
                                 Fast, effective coverage for walls and attics.
                             </p>
                         </div>
 
-                        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm
+                        transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <h3 className="text-lg font-semibold">Insulation Removal</h3>
                             <p className="mt-2 text-sm text-gray-600">
                                 Safe removal of old or damaged insulation.
@@ -131,7 +138,6 @@ export default function Home() {
                     <span>✔ Licensed & Insured  </span>
                     <span>✔ 15+ Years Experience  </span>
                     <span>✔ Free Estimates  </span>
-                    <span>✔ 5-Star Customer Reviews  </span>
                 </div>
             </section>
 
