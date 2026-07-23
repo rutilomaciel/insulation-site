@@ -35,7 +35,7 @@ export default function ProjectCarousel() {
             <div className="mx-auto max-w-6xl px-6">
                 <h2 className="text-center text-3xl font-bold mb-10">Recent Projects</h2>
 
-                <div className="relative w-full h-96 bg-black rounded-lg overflow-hidden">
+                <div className="relative w-full h-96 bg-black rounded-lg overflow-hidden carousel-animate">
                     {/* Image */}
                     <Image
                         src={projects[currentIndex].src}
