@@ -75,7 +75,7 @@ export default function Home() {
                     </nav>
                     <a
                         href="tel:+15097315584"
-                        className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+                        className="rounded-md bg-orange-600 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-700"
                     >
                         (509) 731-5584
                     </a>
@@ -93,8 +93,8 @@ export default function Home() {
                 </p>
                 <a
                     href="#contact"
-                    className="mt-8 inline-block rounded-md bg-blue-600 px-6 py-3 text-base font-semibold text-white
-                    hover:bg-blue-700"
+                    className="mt-8 inline-block rounded-md bg-orange-600 px-6 py-3 text-base font-semibold text-white
+                    hover:bg-orange-700"
                 >
                     Get a Free Quote
                 </a>
@@ -230,7 +230,7 @@ export default function Home() {
 
                         <button
                             type="submit"
-                            className="w-full rounded-lg bg-blue-600 py-3 font-semibold text-white hover:bg-blue-700"
+                            className="w-full rounded-lg bg-orange-600 py-3 font-semibold text-white hover:bg-orange-700"
                         >
                             Send Inquiry
                         </button>
@@ -238,7 +238,7 @@ export default function Home() {
 
                     <p className="mt-6 text-center text-sm text-gray-600">
                         Or call us directly at{" "}
-                        <a href="tel:+15097315584" className="font-semibold text-blue-600">
+                        <a href="tel:+15097315584" className="font-semibold text-orange-600">
                             (509) 731-5584
                         </a>
                     </p>
