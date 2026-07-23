@@ -87,7 +87,7 @@ export default function Home() {
                 <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
                     Professional Insulation Services in Yakima
                 </h1>
-                <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+                <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-950">
                     Save on energy and bills and keep your home comfortable year-round with
                     expert attic, wall, and spray foam insulation installation.
                 </p>
@@ -103,7 +103,7 @@ export default function Home() {
             <ProjectCarousel/>
 
             {/* Services */}
-            <section id="services" className="bg-gray-50 py-16">
+            <section id="services" className="bg-[#faf3e8] py-16">
                 <div className="mx-auto max-w-6xl px-6">
                     <h2 className="text-center text-3xl font-bold text-black">Our Services</h2>
 
@@ -111,7 +111,7 @@ export default function Home() {
                         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm
                         transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <h3 className="text-lg font-semibold">Attic Insulation</h3>
-                            <p className="mt-2 text-sm text-gray-600">
+                            <p className="mt-2 text-sm text-gray-950">
                                 Reduce energy loss with proper attic insulation.
                             </p>
                         </div>
@@ -119,7 +119,7 @@ export default function Home() {
                         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm
                         transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <h3 className="text-lg font-semibold">Spray Foam</h3>
-                            <p className="mt-2 text-sm text-gray-600">
+                            <p className="mt-2 text-sm text-gray-950">
                                 Long-lasting, high-efficiency spray foam application.
                             </p>
                         </div>
@@ -127,7 +127,7 @@ export default function Home() {
                         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm
                         transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <h3 className="text-lg font-semibold">Blown-In Insulation</h3>
-                            <p className="mt-2 text-sm text-gray-600">
+                            <p className="mt-2 text-sm text-gray-950">
                                 Fast, effective coverage for walls and attics.
                             </p>
                         </div>
@@ -135,7 +135,7 @@ export default function Home() {
                         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm
                         transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <h3 className="text-lg font-semibold">Insulation Removal</h3>
-                            <p className="mt-2 text-sm text-gray-600">
+                            <p className="mt-2 text-sm text-gray-950">
                                 Safe removal of old or damaged insulation.
                             </p>
                         </div>
@@ -144,9 +144,9 @@ export default function Home() {
             </section>
 
             {/* Trust Signals*/}
-            <section className="py-12">
+            <section className="py-12 bg-[#faf3e8]">
                 <div className="mx-auto max-w-6xl flex-wrap justify-center gap-10 px-6
-                text-center text-sm font-medium text-gray-700">
+                text-center text-sm font-medium text-gray-900">
                     <span>✔ Licensed & Insured  </span>
                     <span>✔ 15+ Years Experience  </span>
                     <span>✔ Free Estimates  </span>
@@ -154,10 +154,10 @@ export default function Home() {
             </section>
 
             {/* Service Areas */}
-            <section id="areas" className="bg-gray-50 py-16">
+            <section id="areas" className="bg-[#faf3e8] py-16">
                 <div className="mx-auto max-w-6xl px-6 text-center">
                     <h2 className="text-3xl font-bold">Areas We Serve</h2>
-                    <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+                    <p className="mx-auto mt-4 max-w-2xl text-gray-960">
                         Proudly serving Yakima, Selah, Moxee, Sunnyside, Ellensburg, Cle Elum, Tri-Cities and surrounding areas.
                     </p>
                 </div>
@@ -236,7 +236,7 @@ export default function Home() {
                         </button>
                     </form>
 
-                    <p className="mt-6 text-center text-sm text-gray-600">
+                    <p className="mt-6 text-center text-sm text-gray-950">
                         Or call us directly at{" "}
                         <a href="tel:+15097315584" className="font-semibold text-orange-600">
                             (509) 731-5584
