@@ -57,9 +57,21 @@ export default function Home() {
                         className="h-24 w-auto"
                         />
 
-                    <nav className="hidden gap-8 text-base font-medium md:flex">
-                        <a href="#services" className="hover:text-blue-600">Services</a>
-                        <a href="#contact" className="hover:text-blue-600">Contact</a>
+                    <nav className="hidden gap-8 md:flex">
+                        <a
+                            href="#services"
+                            className="flex items-center font-semibold text-black hover:text-orange-600 transition-colors"
+                            style={{ fontFamily: "'Inter Tight', sans-serif", fontSize: '16px' }}
+                        >
+                            Services
+                        </a>
+                        <a
+                            href="#contact"
+                            className="flex items-center font-semibold text-black hover:text-orange-600 transition-colors"
+                            style={{ fontFamily: "'Inter Tight', sans-serif", fontSize: '16px' }}
+                        >
+                            Contact
+                        </a>
                     </nav>
                     <a
                         href="tel:+15097315584"
