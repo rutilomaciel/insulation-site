@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api
+
+Sitemap: https://insulation-site-v.vercel.app/sitemap.xml
