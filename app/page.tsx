@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import {useState} from 'react';
 import Image from 'next/image';
 import ProjectCarousel from './components/ProjectCarousel';
 
@@ -15,7 +15,7 @@ export default function Home() {
     const [submitted, setSubmitted] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         setFormData((prev) => ({
             ...prev,
             [name]: value,
@@ -36,7 +36,7 @@ export default function Home() {
 
             if (response.ok) {
                 setSubmitted(true);
-                setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+                setFormData({name: '', email: '', phone: '', service: '', message: ''});
                 setTimeout(() => setSubmitted(false), 5000);
             }
         } catch (error) {
@@ -47,28 +47,32 @@ export default function Home() {
     return (
         <main>
             {/* Header */}
-            <header className="border-b border-gray-200 bg-[#faf3e8]">
+            <header className="sticky top-0 z-50 border-b border-gray-200 bg-[#faf3e8]">
                 <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-                    <Image
-                        src="/AJ Logo F.png"
-                        alt="AJ Insulation LLC"
-                        width={120}
-                        height={80}
-                        className="h-24 w-auto"
+                    <a href="#" onClick={(e) => {
+                        e.preventDefault();
+                        window.scrollTo({top: 0, behavior: 'smooth'});
+                    }}>
+                        <Image
+                            src="/AJ Logo F.png"
+                            alt="AJ Insulation LLC"
+                            width={120}
+                            height={80}
+                            className="h-24 w-auto cursor-pointer"
                         />
-
+                    </a>
                     <nav className="hidden gap-8 md:flex">
                         <a
                             href="#services"
                             className="flex items-center font-semibold text-black hover:text-orange-600 transition-colors"
-                            style={{ fontFamily: "'Inter Tight', sans-serif", fontSize: '16px' }}
+                            style={{fontFamily: "'Inter Tight', sans-serif", fontSize: '16px'}}
                         >
                             Services
                         </a>
                         <a
                             href="#contact"
                             className="flex items-center font-semibold text-black hover:text-orange-600 transition-colors"
-                            style={{ fontFamily: "'Inter Tight', sans-serif", fontSize: '16px' }}
+                            style={{fontFamily: "'Inter Tight', sans-serif", fontSize: '16px'}}
                         >
                             Contact
                         </a>
@@ -158,7 +162,8 @@ export default function Home() {
                 <div className="mx-auto max-w-6xl px-6 text-center">
                     <h2 className="text-3xl font-bold">Areas We Serve</h2>
                     <p className="mx-auto mt-4 max-w-2xl text-gray-960">
-                        Proudly serving Yakima, Selah, Moxee, Sunnyside, Ellensburg, Cle Elum, Tri-Cities and surrounding areas.
+                        Proudly serving Yakima, Selah, Moxee, Sunnyside, Ellensburg, Cle Elum, Tri-Cities and
+                        surrounding areas.
                     </p>
                 </div>
             </section>
@@ -246,7 +251,7 @@ export default function Home() {
             </section>
 
             {/* Footer */}
-            <footer className="border-t border-gray-200 py-8 text-center text-sm text-gray-500">
+            <footer className="border-t border-gray-200 py-8 text-center text-sm text-gray-950">
                 © {new Date().getFullYear()} AJ Insulation LLC. All rights reserved.
             </footer>
         </main>

@@ -4,12 +4,12 @@ import {useState, useEffect} from "react";
 import Image from "next/image";
 
 const projects = [
-    { src: '/projects/ins ceiling.jpg', alt: 'Insulation - Ceiling' },
-    { src: '/projects/walls dirt.jpg', alt: 'Walls - Before' },
-    { src: '/projects/ins plastic.jpg', alt: 'Insulation - Plastic' },
-    { src: '/projects/ins walls.jpg', alt: 'Insulation - Walls' },
-    { src: '/projects/wood ceiling.jpg', alt: 'Wood Ceiling' },
-    { src: '/projects/white ceiling.jpg', alt: 'White Ceiling' },
+    {src: '/projects/ins ceiling.jpg', alt: 'Insulation - Ceiling'},
+    {src: '/projects/walls dirt.jpg', alt: 'Walls - Before'},
+    {src: '/projects/ins plastic.jpg', alt: 'Insulation - Plastic'},
+    {src: '/projects/ins walls.jpg', alt: 'Insulation - Walls'},
+    {src: '/projects/wood ceiling.jpg', alt: 'Wood Ceiling'},
+    {src: '/projects/white ceiling.jpg', alt: 'White Ceiling'},
 ];
 
 export default function ProjectCarousel() {
