@@ -67,13 +67,14 @@ export default function HeroCarousel() {
                                 absolute inset-0
                                 flex
                                 items-center
+                                justify-center
                             ">
 
                                 <div className="
                                     mx-6
-                                    md:ml-10
                                     max-w-xl
                                     text-white
+                                    text-center
                                     transition-opacity
                                     duration-500
                                 ">

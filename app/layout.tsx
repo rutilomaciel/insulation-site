@@ -33,7 +33,7 @@ export default function RootLayout({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "AJ Insulation LLC",
-        "image": "https://aj-insulation-site-v-.vercel.app/AJ%20Logo%20F.png",
+        "image": "https://insulation-site-v.vercel.app/aj%20insulation%20logo%20new.png",
         "description": "Professional insulation services in Yakima and surrounding areas.",
         "address": {
             "@type": "PostalAddress",
@@ -43,7 +43,7 @@ export default function RootLayout({
             "addressCountry": "US",
         },
         "telephone": "(509) 731-5584",
-        "url": "https://aj-insulation-site-v-.vercel.app",
+        "url": "https://insulation-site-v.vercel.app",
         "areaServed": [
             {
                 "@type": "City",
