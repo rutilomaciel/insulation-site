@@ -3,6 +3,7 @@
 import {useState} from 'react';
 import Image from 'next/image';
 import ProjectCarousel from './components/ProjectCarousel';
+import HeroCarousel from "./components/HeroCarousel";
 
 export default function Home() {
     const [formData, setFormData] = useState({
@@ -54,7 +55,7 @@ export default function Home() {
                         window.scrollTo({top: 0, behavior: 'smooth'});
                     }}>
                         <Image
-                            src="/AJ Logo F.png"
+                            src="/aj insulation logo new.png"
                             alt="AJ Insulation LLC"
                             width={120}
                             height={80}
@@ -86,23 +87,7 @@ export default function Home() {
                 </div>
             </header>
 
-            {/* Hero */}
-            <section className="mx-aito max-w-6xl px-6 py-20 text-center">
-                <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
-                    Professional Insulation Services in Yakima
-                </h1>
-                <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-950">
-                    Save on energy and bills and keep your home comfortable year-round with
-                    expert attic, wall, and spray foam insulation installation.
-                </p>
-                <a
-                    href="#contact"
-                    className="mt-8 inline-block rounded-md bg-orange-600 px-6 py-3 text-base font-semibold text-white
-                    hover:bg-orange-700"
-                >
-                    Get a Free Quote
-                </a>
-            </section>
+            <HeroCarousel/>
 
             <ProjectCarousel/>
 
@@ -111,7 +96,7 @@ export default function Home() {
                 <div className="mx-auto max-w-6xl px-6">
                     <h2 className="text-center text-3xl font-bold text-black">Our Services</h2>
 
-                    <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols 4">
+                    <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                         <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm
                         transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
                             <h3 className="text-lg font-semibold">Attic Insulation</h3>
@@ -175,7 +160,7 @@ export default function Home() {
 
                     {submitted && (
                         <div className="mt-6 rounded-lg bg-green-100 p-4 text-center text-green-800">
-                            ✓ Thanks for reaching out! We'll contact you soon.
+                            ✓ Thanks for reaching out! We&#39;ll contact you soon.
                         </div>
                     )}
 

@@ -27,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #171717 !important;
+  /*color: #171717 !important;*/
   font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
 }
@@ -45,4 +45,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .carousel-animate {
   animation: slideInRight 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity:0;
+    transform:translateX(-80px);
+  }
+  to {
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+
+@keyframes slideInDelay {
+  from {
+    opacity:0;
+    transform:translateX(-50px);
+  }
+  to {
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+
+.animate-slideIn {
+  animation: slideIn .8s ease forwards;
+}
+
+
+.animate-slideInDelay {
+  animation: slideInDelay 1s ease .3s forwards;
+}
+
+.swiper-slide:not(.swiper-slide-active) h1,
+.swiper-slide:not(.swiper-slide-active) p,
+.swiper-slide:not(.swiper-slide-active) a {
+  opacity: 0;
+}
+
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  height: 100%;
 }

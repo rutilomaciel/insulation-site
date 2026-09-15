@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
     const schemaData = {
         "@context": "https://schema.org",
-        "@type": "Local Business",
+        "@type": "LocalBusiness",
         "name": "AJ Insulation LLC",
         "image": "https://aj-insulation-site-v-.vercel.app/AJ%20Logo%20F.png",
         "description": "Professional insulation services in Yakima and surrounding areas.",
