@@ -10,7 +10,7 @@ import "swiper/css/effect-fade";
 
 const slides = [
     {
-        image: "/attic.jpg",
+        image: "/yakimamtns.jpg",
         title: "Professional Insulation Services",
         text: "Keep your home comfortable year-round with expert insulation installation."
     },
