@@ -10,17 +10,17 @@ import "swiper/css/effect-fade";
 
 const slides = [
     {
-        image: "/yakimamtns.jpg",
+        image: "/white_placeholder.jpg",
         title: "Professional Insulation Services",
         text: "Keep your home comfortable year-round with expert insulation installation."
     },
     {
-        image: "/sprayfoam.jpg",
+        image: "/white_placeholder.jpg",
         title: "Save Energy. Lower Bills.",
         text: "High-performance attic, wall, and spray foam insulation."
     },
     {
-        image: "/crew.jpg",
+        image: "/white_placeholder.jpg",
         title: "Trusted Yakima Insulation Experts",
         text: "Licensed, insured, and experienced."
     }
